@@ -13,7 +13,15 @@ This project allows you to:
 - Save the output image with the highlighted faces.
 
   ## 📁 Project Structure
-
+FaceDetectionProject/
+├── lib/                           # External libraries
+│   └── opencv_java4120.dll        # OpenCV native library (ignored in repo)
+├── src/
+│   ├── resources/
+│   │   └── haarcascade_frontalface_default.xml
+│   └── FaceDetector.java          # Main Java program
+├── face.jpg                        # Input image for detection
+└── README.md                       # Project documentation
 
 > *Note:* Large OpenCV binaries (.dll or .exe) are *not included* in the repo. Download OpenCV separately and configure java.library.path.
 
