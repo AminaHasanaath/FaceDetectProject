@@ -12,7 +12,10 @@ This project allows you to:
 - Draw rectangles around detected faces.
 - Save the output image with the highlighted faces.
 
+
   ## 📁 Project Structure
+
+```plaintext
 FaceDetectionProject/
 ├── lib/                           # External libraries
 │   └── opencv_java4120.dll        # OpenCV native library (ignored in repo)
