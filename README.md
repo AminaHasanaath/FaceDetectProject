@@ -1,4 +1,3 @@
-# FaceDetectProject
 # Face Detection in Java using OpenCV
 
 This project demonstrates how to detect human faces in an image using Java and OpenCV’s Haar Cascade classifier.  
