@@ -1,8 +1,3 @@
-Perfect! I’ve created a complete, ready-to-use README.md for your FaceDetector project that includes everything: project description, structure, setup, what you learned, notes, and references. You can copy-paste this directly into your repo.
-
-
----
-
 # Java Face Detector Mini-Project
 
 A simple Java project demonstrating *face detection* using the *OpenCV* library. The program detects faces in an input image and marks them with rectangles.
