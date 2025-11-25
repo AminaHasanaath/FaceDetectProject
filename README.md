@@ -1,90 +1,146 @@
-# Java Face Detector Mini-Project
+# 👁️ Java Face Detector — Mini Project
 
-A simple Java project demonstrating *face detection* using the *OpenCV* library. The program detects faces in an input image and marks them with rectangles.
-
----
-
-## 🖼 Project Overview
-
-This project allows you to:
-- Load an image using OpenCV.
-- Detect faces using Haar Cascade Classifier (haarcascade_frontalface_default.xml).
-- Draw rectangles around detected faces.
-- Save the output image with the highlighted faces.
-
-
-
-## ⚙ Setup Instructions
-
-1. *Install OpenCV*  
-   Download OpenCV from [OpenCV official site](https://opencv.org/releases/). Extract the files and locate:
-   - opencv-4120.jar (Java library)
-   - opencv_java4120.dll (native library)
-
-2. *Include Libraries in Project*
-   - Add opencv-4120.jar to your project’s build path.
-   - Set the java.library.path to the folder containing opencv_java4120.dll.
-
-3. *Add Haar Cascade XML*
-   - Copy haarcascade_frontalface_default.xml into src/resources/.
-
-4. *Add Input Image*
-   - Place an image named face.jpg in the project root (or update path in code).
-
-5. *Compile and Run Program*
-   ```bash
-   javac -cp ".;lib/opencv-4120.jar" src/FaceDetector.java
-   java -cp ".;lib/opencv-4120.jar" -Djava.library.path=lib FaceDetector
-
-6. Check Output
-The program will generate face.jpg with rectangles marking detected faces.
-
-## ✅ What I Learned
-1. How to integrate OpenCV with Java.
-2. How Haar Cascade classifiers detect faces.
-3. Reading and writing images using OpenCV (Mat, Imgcodecs).
-4. Drawing shapes (rectangles) on images (Imgproc.rectangle()).
-5. Handling native libraries (.dll) in Java projects.
-6. Debugging OpenCV errors (empty images, incorrect XML, wrong detection).
-7. Managing project structure and external resources.
-8. Using Git/GitHub for version control and handling large files.
+A simple but powerful Java project that performs **face detection** using **OpenCV**.
+The program scans an image, detects human faces using a pretrained Haar Cascade model, and highlights them using rectangles.
 
 ---
 
-## ⚠ Notes
-- Detection may vary depending on image size, lighting, and face angles.
-- For multiple faces, the program draws multiple rectangles.
-- Always use the official Haar cascade XMLs provided by OpenCV for best results.
-- Large binaries like .dll or .exe are excluded from the repo. Users must download them separately.
+## 🧠 Tech Stack
 
+<img src="https://skillicons.dev/icons?i=java,opencv,github,idea" height="85" />
+<b>Java • openCV • GitHub •ideaL</b>
 
 
 ---
-## 💡 Tips for GitHub
-Use .gitignore to exclude *.dll or *.exe files to avoid push errors.
-You can provide a link in your README to download OpenCV binaries instead of storing them in the repo.
-Always pull from remote before pushing to avoid merge conflicts.
 
+## 📸 Project Overview
 
----  ## 📁 Project Structure
+This project demonstrates:
+
+* Reading images in Java using OpenCV
+* Detecting faces using Haar Cascade Model (`haarcascade_frontalface_default.xml`)
+* Drawing rectangles around detected faces
+* Saving the output image with detected faces
+
+💡 *Perfect beginner project for learning Java + Computer Vision.*
+
+---
+
+## 📂 Project Structure
 
 ```plaintext
 FaceDetectionProject/
-├── lib/                           # External libraries
-│   └── opencv_java4120.dll        # OpenCV native library (ignored in repo)
+├── lib/
+│   └── opencv_java4120.dll              # Native library (NOT pushed to GitHub)
 ├── src/
 │   ├── resources/
 │   │   └── haarcascade_frontalface_default.xml
-│   └── FaceDetector.java          # Main Java program
-├── face.jpg                        # Input image for detection
-└── README.md                       # Project documentation
+│   └── FaceDetector.java                # Main program
+├── face.jpg                             # Input image
+└── README.md
+```
 
-> *Note:* Large OpenCV binaries (.dll or .exe) are *not included* in the repo. Download OpenCV separately and configure java.library.path.
+⚠ **Note:** Large OpenCV binaries (`.dll`, `.jar`) should NOT be pushed to GitHub.
+Instead, users must download them manually.
 
+---
 
+## ⚙️ Setup Instructions
 
+### **1️⃣ Install OpenCV**
 
+Download the latest release from:
+🔗 [https://opencv.org/releases/](https://opencv.org/releases/)
 
+Find these files inside the extracted folder:
 
+* `opencv-4120.jar`
+* `opencv_java4120.dll`
 
+---
 
+### **2️⃣ Add Dependencies to Your Project**
+
+* Add **opencv-4120.jar** to your Build Path
+* Add the folder containing the `.dll` to:
+
+```
+-Djava.library.path=lib
+```
+
+---
+
+### **3️⃣ Add Haar Cascade File**
+
+Place inside:
+
+```
+src/resources/haarcascade_frontalface_default.xml
+```
+
+---
+
+### **4️⃣ Add Input Image**
+
+Place any image as:
+
+```
+face.jpg
+```
+
+(or change the filename inside the code)
+
+---
+
+### **5️⃣ Compile & Run**
+
+```bash
+javac -cp ".;lib/opencv-4120.jar" src/FaceDetector.java
+java -cp ".;lib/opencv-4120.jar" -Djava.library_path=lib FaceDetector
+```
+
+---
+
+### **6️⃣ Output**
+
+A new **face.jpg** file is generated with rectangles drawn around the detected faces.
+
+---
+
+## 💡 What I Learned
+
+✔ Integrating **OpenCV with Java**
+✔ Understanding **Haar Cascade** classifier
+✔ Reading & writing images using OpenCV (`Mat`, `Imgcodecs`)
+✔ Drawing on images (`Imgproc.rectangle()`)
+✔ Handling native OpenCV libraries (`.dll`)
+✔ Debugging vision errors (empty Mat, wrong path, detection issues)
+✔ Organizing Java projects with external resources
+✔ Using **Git/GitHub** with large-file exclusions
+
+---
+
+## ⚠ Important Notes
+
+* Accuracy depends on lighting, face size, and angle
+* Haar cascade should be the **official OpenCV XML**
+* `.dll` / `.exe` files **must NOT be pushed** to GitHub
+* Use a `.gitignore` for binaries
+
+Example:
+
+```gitignore
+*.dll
+*.exe
+*.jar
+```
+
+---
+
+## 📝 Tips for GitHub
+
+* Provide a link to download OpenCV instead of including it
+* Keep your repo lightweight and clean
+* Add a sample output screenshot if possible
+
+---
